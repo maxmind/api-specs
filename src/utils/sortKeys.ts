@@ -10,7 +10,6 @@ const sortKeys = (x: any): any => {
   return Object.keys(x).sort().reduce(
     (o, k) => ({
       ...o,
-      // eslint-disable-next-line security/detect-object-injection
       [k]: sortKeys(x[k]),
     }),
     {}

@@ -4,7 +4,7 @@ const GeoName: SchemaObject = {
   properties: {
     geoname_id: {
       example: 'test',
-      type: 'string',
+      type: 'number',
     },
     names: {
       properties: {

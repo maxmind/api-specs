@@ -1,8 +1,9 @@
 import merge from 'lodash/merge';
 import { isSchemaObject, SchemaObject } from 'openapi3-ts';
-import getPrimative from './getPrimative';
+import getPrimitive from './getPrimitive';
 import normalizeArray from './normalizeArray';
 import normalizeObject from './normalizeObject';
+import primitives from '../primitives';
 
 const sampleFromSchema = (schema: SchemaObject, config: any = {}): any => {
   let { type } = schema;
@@ -67,7 +68,7 @@ const sampleFromSchema = (schema: SchemaObject, config: any = {}): any => {
       : normalizeArray(schema['enum'])[0];
   }
 
-  return getPrimative(schema);
+  return getPrimitive(schema, primitives);
 };
 
 export default sampleFromSchema;
