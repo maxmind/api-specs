@@ -10,10 +10,9 @@ const compileSpec = (spec: OpenApiBuilder) => {
 Object.entries(specs).map(([name, spec]) => {
   const compiledSpec = compileSpec(spec);
   const file = `${process.cwd()}/dist/${name}.json`;
-  console.log(file);
 
   fs.outputFile(
     file,
-    JSON.stringify(compiledSpec, null, 2),
+    (compiledSpec as unknown as OpenApiBuilder).getSpecAsJson(),
   );
 });
