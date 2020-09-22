@@ -19,6 +19,10 @@
     "typescript": "^4.0.2"
   },
   "description": "JSON Schema and OpenAPI spec files for MaxMind APIs",
+  "engines": {
+    "node": "12",
+    "yarn": "1.22"
+  },
   "license": "MIT",
   "main": "index.js",
   "name": "api-specs",
