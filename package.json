@@ -1,7 +1,7 @@
 {
   "author": "Wes Rice <wrice@maxmind.com>",
   "devDependencies": {
-    "@apidevtools/swagger-parser": "^10.0.1",
+    "@apidevtools/swagger-parser": "^10.0.2",
     "@maxmind/minfraud-api-node": "^1.8.0",
     "@types/fs-extra": "^9.0.1",
     "@types/jest": "^26.0.13",
