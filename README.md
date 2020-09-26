@@ -24,6 +24,9 @@
 
 This project documents MaxMind's public APIs using the [OpenAPI spec](http://spec.openapis.org/oas/v3.0.3) for web services and [JSON Schema spec](https://json-schema.org/) for non-web services.
 
+Spec files:
+* minFraud 2.0 ([bundled](https://maxmind.github.io/api-specs/minfraud/2.0/spec.bundled.json) | [dereferenced](https://maxmind.github.io/api-specs/minfraud/2.0/spec.dereferenced.json))
+
 ## Usage
 
 * [Minimum Requirements](#minimum-requirements)

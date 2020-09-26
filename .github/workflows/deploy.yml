@@ -39,13 +39,11 @@ jobs:
           steps.cache-node-modules.outputs['cache-hit'] != 'true'
         name: Install dependencies
         run: yarn install
-      - name: Unit tests
-        run: yarn test
       - env:
           MAXMIND_ACCOUNT_ID: ${{ secrets.MAXMIND_ACCOUNT_ID }}
           MAXMIND_LICENSE_KEY: ${{ secrets.MAXMIND_LICENSE_KEY }}
-        name: End-to-end tests
-        run: yarn test:e2e
+        name: Test
+        run: yarn test
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:

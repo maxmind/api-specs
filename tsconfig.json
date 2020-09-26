@@ -7,6 +7,6 @@
     "noImplicitAny": true,
     "target": "es2017",
   },
-  "include": ["src/", "e2e/"],
+  "include": ["src/", "e2e/", "build.ts"],
   "exclude": ["node_modules"]
 }

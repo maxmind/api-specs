@@ -1,38 +1,71 @@
 import OpenApiParser from '@apidevtools/swagger-parser';
-import * as minFraud from '@maxmind/minfraud-api-node';
 import dotenv from 'dotenv';
 import jestOpenAPI from 'jest-openapi';
-import snakecaseKeys from 'snakecase-keys';
+import fetch, { Headers } from 'node-fetch';
 
 dotenv.config();
 
 const parser = new OpenApiParser();
 
-describe('minfraud.json', () => {
-  let client: any;
+const { MAXMIND_ACCOUNT_ID, MAXMIND_LICENSE_KEY } = process.env;
 
+if (!MAXMIND_ACCOUNT_ID) {
+  throw Error("The `MAXMIND_ACCOUNT_ID` environment variable is required.");
+}
+
+if (!MAXMIND_LICENSE_KEY) {
+  throw Error("The `MAXMIND_LICENSE_KEY` environment variable is required.");
+}
+
+const basicAuth = Buffer.from(
+  `${MAXMIND_ACCOUNT_ID}:${MAXMIND_LICENSE_KEY}`
+).toString('base64');
+
+const minfraud = async (endpoint: any, body: any) => await fetch(
+  `https://minfraud.maxmind.com/minfraud/v2.0/${endpoint}`,
+  {
+    body: JSON.stringify(body),
+    headers: new Headers({
+      Authorization: `Basic ${basicAuth}`
+    }),
+    method: 'POST',
+  },
+).then(res => res.json());
+
+const transaction = {
+  device: {
+    ip_address: '8.8.8.8',
+  },
+  email: {
+    address: 'foo@bar.com',
+    domain: 'bar.com',
+  },
+};
+
+describe('minFraud Web Service', () => {
   beforeAll(async () => {
-    const spec = await parser.dereference('dist/minFraud.json');
+    const spec = await parser.dereference('dist/minfraud/2.0/spec.dereferenced.json');
     jestOpenAPI(spec);
-    client = new minFraud.Client(
-      process.env.MAXMIND_ACCOUNT_ID,
-      process.env.MAXMIND_LICENSE_KEY,
-    );
   });
 
-  it('is a valid OpenAPI v3 spec', async () => {
-    const transaction = new minFraud.Transaction({
-      device: new minFraud.Device({
-        ipAddress: '8.8.8.8',
-      }),
-      email: new minFraud.Email({
-        address: 'foo@bar.com',
-        domain: 'bar.com',
-      }),
+  describe('Score', () => {
+    it('response matches OpenAPI Spec', async () => {
+      const response = await minfraud('score', transaction);
+      expect(response).toSatisfySchemaInApiSpec('Response.Score');
     });
+  });
 
-    const response = await client.insights(transaction);
+  describe('Insights', () => {
+    it('response matches OpenAPI Spec', async () => {
+      const response = await minfraud('insights', transaction);
+      expect(response).toSatisfySchemaInApiSpec('Response.Insights');
+    });
+  });
 
-    expect(snakecaseKeys(response)).toSatisfySchemaInApiSpec('Response.Insights');
+  describe('Factors', () => {
+    it('response matches OpenAPI Spec', async () => {
+      const response = await minfraud('factors', transaction);
+      expect(response).toSatisfySchemaInApiSpec('Response.Factors');
+    });
   });
 });
