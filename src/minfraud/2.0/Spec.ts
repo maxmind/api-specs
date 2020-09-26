@@ -1,5 +1,5 @@
 import { OpenApiBuilder, RequestBodyObject } from 'openapi3-ts';
-import addCompiledExamples from '../../utils/addCompiledExamples';
+import { OpenAPIV3 } from 'openapi-types';
 
 import Request from './schemas/Request';
 import RequestAccount from './schemas/Request/Account';
@@ -27,8 +27,6 @@ import ResponseScore from './schemas/Response/Score';
 import ResponseScoreDisposition from './schemas/Response/Score/Disposition';
 import ResponseScoreIpAddress from './schemas/Response/Score/IpAddress';
 import ResponseScoreWarnings from './schemas/Response/Score/Warnings';
-// import { addCompiledExamples } from './utils';
-
 
 const Spec = new OpenApiBuilder();
 
@@ -104,7 +102,6 @@ Spec
   .addSchema('Response.Score.IpAddress', ResponseScoreIpAddress)
   .addSchema('Response.Score.Warnings', ResponseScoreWarnings)
 
-
   .addPath('/factors', {
     post: {
       requestBody,
@@ -151,4 +148,4 @@ Spec
   .addSchema('Response.Insights.Subscores', ResponseInsightsSubscores)
 ;
 
-export default Spec;
+export default Spec.getSpec() as OpenAPIV3.Document;
