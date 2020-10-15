@@ -505,22 +505,22 @@
   resolved "https://registry.yarnpkg.com/@jsdevtools/ono/-/ono-7.1.3.tgz#9df03bbd7c696a5c58885c34aa06da41c8543796"
   integrity sha512-4JQNk+3mVzK3xh2rqd6RB4J46qUR19azEHBneZyTZM+c456qOrbbM/5xcR8huNCCcbVt7+UmizG6GuUvPvKUYg==
 
-"@maxmind/geoip2-node@^1.1.1":
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/@maxmind/geoip2-node/-/geoip2-node-1.5.0.tgz#e2439729af74b961e62c9353d9cd7b2b8dc86029"
-  integrity sha512-fSaswe/yIeI29aW/aFnraavh6s+6j7GsmvuNmdBDfPaItnRgk/9Q3cYpvjPztY014KBJRVxxU4dbssAiLTNTAA==
+"@maxmind/geoip2-node@^1.6.0":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@maxmind/geoip2-node/-/geoip2-node-1.6.0.tgz#526da73970a807a916ba15b3aa4c0b5247113348"
+  integrity sha512-3+AixEbxcYRcSEzT4t1Zgs2O00tjtFjH8XFz1zOI3NISDzVrYCL5cc59Nq81bqp+zy/cIex3IGOyXniCPjGgsg==
   dependencies:
     camelcase-keys "^6.0.1"
     ip6addr "^0.2.3"
     lodash.set "^4.3.2"
-    maxmind "^4.1.0"
+    maxmind "^4.2.0"
 
-"@maxmind/minfraud-api-node@^1.8.0":
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/@maxmind/minfraud-api-node/-/minfraud-api-node-1.8.0.tgz#dcd19ff947337aed3ce745bdc87d0f6b8a433ed1"
-  integrity sha512-W3mi+3g8pGD2G3gl+iEZul2+jokY2c48x3FQyiMf7mqPRspbKG022nR9vsPmb55O5jsSDxI9h7GVcdQ7/7s88A==
+"@maxmind/minfraud-api-node@^1.10.0":
+  version "1.10.0"
+  resolved "https://registry.yarnpkg.com/@maxmind/minfraud-api-node/-/minfraud-api-node-1.10.0.tgz#6dd90afbb451db915a8c4cd49aa045fa44a8c6ed"
+  integrity sha512-1vY0a+hkMH5k/mmevwa90bKvFbGAZ86rYqNloXUKVZw5DwwZibbIqcJt3VOyWxlHh+VCv7h+7wZLGgWbyFBOEA==
   dependencies:
-    "@maxmind/geoip2-node" "^1.1.1"
+    "@maxmind/geoip2-node" "^1.6.0"
     camelcase-keys "^6.0.1"
     maxmind "^4.1.0"
     snakecase-keys "^3.1.0"
@@ -2633,11 +2633,12 @@ map-visit@^1.0.0:
   dependencies:
     object-visit "^1.0.0"
 
-maxmind@^4.1.0:
-  version "4.1.4"
-  resolved "https://registry.yarnpkg.com/maxmind/-/maxmind-4.1.4.tgz#14fa0cf9a88f15b708edfd1378c5e49e0f0105c1"
-  integrity sha512-DfcZPpc0XJVF1yypRpVqMs9JiSYYShVkfexSjwTbfqZMCEoQlCU83ooX9cRmWMUaLqm4zffi7HtZg7XqcJaL1A==
+maxmind@^4.1.0, maxmind@^4.2.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/maxmind/-/maxmind-4.3.0.tgz#0e04f00503e3693615efe848e94ec959500d7573"
+  integrity sha512-qYdCsoivX7xGW8L5UhjZNxx57odwzmzFPtSt3YvGwW8moSKoIwnCq2NbmfHdmqYzj5ffzSzxKM3lqURN8INyzA==
   dependencies:
+    mmdb-lib "1.2.0"
     tiny-lru "7.0.6"
 
 merge-stream@^2.0.0:
@@ -2713,6 +2714,11 @@ mkdirp@1.x:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-1.0.4.tgz#3eb5ed62622756d79a5f0e2a221dfebad75c2f7e"
   integrity sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==
+
+mmdb-lib@1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/mmdb-lib/-/mmdb-lib-1.2.0.tgz#0ecd93f4942f65a2d09be0502fa9126939606727"
+  integrity sha512-3XYebkStxqCgWJjsmT9FCaE19Yi4Tvs2SBPKhUks3rJJh52oF1AKAd9kei+LTutud3a6RCZ0o2Um96Fn7o3zVA==
 
 ms@2.0.0:
   version "2.0.0"
