@@ -5,7 +5,6 @@ import Request from './schemas/Request';
 import RequestAccount from './schemas/Request/Account';
 import RequestAddress from './schemas/Request/Address';
 import RequestCreditCard from './schemas/Request/CreditCard';
-import RequestCustomInput from './schemas/Request/CustomInput';
 import RequestCustomInputs from './schemas/Request/CustomInputs';
 import RequestDevice from './schemas/Request/Device';
 import RequestEmail from './schemas/Request/Email';
@@ -87,7 +86,6 @@ Spec
   .addSchema('Request.Address', RequestAddress)
   .addSchema('Request.Billing', RequestAddress)
   .addSchema('Request.CreditCard', RequestCreditCard)
-  .addSchema('Request.CustomInput', RequestCustomInput)
   .addSchema('Request.CustomInputs', RequestCustomInputs)
   .addSchema('Request.Device', RequestDevice)
   .addSchema('Request.Email', RequestEmail)
