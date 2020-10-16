@@ -156,47 +156,49 @@
                   },
                   "custom_inputs": {
                     "description": "Custom Inputs are optional inputs to the minFraud service that must first be defined for your account. Select “Custom Inputs” from the Account Portal in order to do so. See our Custom Inputs documentation for more information.",
-                    "items": {
-                      "oneOf": [
-                        {
-                          "properties": {
-                            "[your custom key]": {
-                              "type": "boolean"
-                            }
+                    "anyOf": [
+                      {
+                        "properties": {
+                          "custom_input_key_1": {
+                            "type": "boolean"
                           }
                         },
-                        {
-                          "properties": {
-                            "[your custom key]": {
-                              "description": "A floating point number between -10<sup>13</sup> and 10<sup>13</sup>",
-                              "maximum": 100000000000000,
-                              "minimum": -100000000000000,
-                              "type": "number"
-                            }
+                        "type": "object"
+                      },
+                      {
+                        "properties": {
+                          "custom_input_key_2": {
+                            "description": "A floating point number between -10<sup>13</sup> and 10<sup>13</sup>",
+                            "maximum": 100000000000000,
+                            "minimum": -100000000000000,
+                            "type": "number"
                           }
                         },
-                        {
-                          "properties": {
-                            "[your custom key]": {
-                              "description": "A phone number, limited to 255 characters. Numbers, spaces and punctuation accepted, although spaces and punctuation will be stripped. The following ASCII characters constitute the accepted punctuation: ` ~ ! @ # $ % ^ & * ( ) – _ = + ‘ ” ; : , < . > / ? \\ | [ ] { and }.",
-                              "format": "phone",
-                              "maxLength": 255,
-                              "type": "string"
-                            }
+                        "type": "object"
+                      },
+                      {
+                        "properties": {
+                          "custom_input_key_3": {
+                            "description": "A phone number, limited to 255 characters. Numbers, spaces and punctuation accepted, although spaces and punctuation will be stripped. The following ASCII characters constitute the accepted punctuation: ` ~ ! @ # $ % ^ & * ( ) – _ = + ‘ ” ; : , < . > / ? \\ | [ ] { and }.",
+                            "format": "phone",
+                            "maxLength": 255,
+                            "type": "string"
                           }
                         },
-                        {
-                          "properties": {
-                            "[your custom key]": {
-                              "description": "A string, limited to 255 characters. The null character is not allowed.",
-                              "maxLength": 255,
-                              "type": "string"
-                            }
+                        "type": "object"
+                      },
+                      {
+                        "properties": {
+                          "custom_input_key_4": {
+                            "description": "A string, limited to 255 characters. The null character is not allowed.",
+                            "maxLength": 255,
+                            "type": "string"
                           }
-                        }
-                      ],
-                      "type": "object"
-                    }
+                        },
+                        "type": "object"
+                      }
+                    ],
+                    "type": "object"
                   },
                   "device": {
                     "description": "This object contains information about the device used in the transaction.",
@@ -700,47 +702,49 @@
                   },
                   "custom_inputs": {
                     "description": "Custom Inputs are optional inputs to the minFraud service that must first be defined for your account. Select “Custom Inputs” from the Account Portal in order to do so. See our Custom Inputs documentation for more information.",
-                    "items": {
-                      "oneOf": [
-                        {
-                          "properties": {
-                            "[your custom key]": {
-                              "type": "boolean"
-                            }
+                    "anyOf": [
+                      {
+                        "properties": {
+                          "custom_input_key_1": {
+                            "type": "boolean"
                           }
                         },
-                        {
-                          "properties": {
-                            "[your custom key]": {
-                              "description": "A floating point number between -10<sup>13</sup> and 10<sup>13</sup>",
-                              "maximum": 100000000000000,
-                              "minimum": -100000000000000,
-                              "type": "number"
-                            }
+                        "type": "object"
+                      },
+                      {
+                        "properties": {
+                          "custom_input_key_2": {
+                            "description": "A floating point number between -10<sup>13</sup> and 10<sup>13</sup>",
+                            "maximum": 100000000000000,
+                            "minimum": -100000000000000,
+                            "type": "number"
                           }
                         },
-                        {
-                          "properties": {
-                            "[your custom key]": {
-                              "description": "A phone number, limited to 255 characters. Numbers, spaces and punctuation accepted, although spaces and punctuation will be stripped. The following ASCII characters constitute the accepted punctuation: ` ~ ! @ # $ % ^ & * ( ) – _ = + ‘ ” ; : , < . > / ? \\ | [ ] { and }.",
-                              "format": "phone",
-                              "maxLength": 255,
-                              "type": "string"
-                            }
+                        "type": "object"
+                      },
+                      {
+                        "properties": {
+                          "custom_input_key_3": {
+                            "description": "A phone number, limited to 255 characters. Numbers, spaces and punctuation accepted, although spaces and punctuation will be stripped. The following ASCII characters constitute the accepted punctuation: ` ~ ! @ # $ % ^ & * ( ) – _ = + ‘ ” ; : , < . > / ? \\ | [ ] { and }.",
+                            "format": "phone",
+                            "maxLength": 255,
+                            "type": "string"
                           }
                         },
-                        {
-                          "properties": {
-                            "[your custom key]": {
-                              "description": "A string, limited to 255 characters. The null character is not allowed.",
-                              "maxLength": 255,
-                              "type": "string"
-                            }
+                        "type": "object"
+                      },
+                      {
+                        "properties": {
+                          "custom_input_key_4": {
+                            "description": "A string, limited to 255 characters. The null character is not allowed.",
+                            "maxLength": 255,
+                            "type": "string"
                           }
-                        }
-                      ],
-                      "type": "object"
-                    }
+                        },
+                        "type": "object"
+                      }
+                    ],
+                    "type": "object"
                   },
                   "device": {
                     "description": "This object contains information about the device used in the transaction.",
@@ -1244,47 +1248,49 @@
                   },
                   "custom_inputs": {
                     "description": "Custom Inputs are optional inputs to the minFraud service that must first be defined for your account. Select “Custom Inputs” from the Account Portal in order to do so. See our Custom Inputs documentation for more information.",
-                    "items": {
-                      "oneOf": [
-                        {
-                          "properties": {
-                            "[your custom key]": {
-                              "type": "boolean"
-                            }
+                    "anyOf": [
+                      {
+                        "properties": {
+                          "custom_input_key_1": {
+                            "type": "boolean"
                           }
                         },
-                        {
-                          "properties": {
-                            "[your custom key]": {
-                              "description": "A floating point number between -10<sup>13</sup> and 10<sup>13</sup>",
-                              "maximum": 100000000000000,
-                              "minimum": -100000000000000,
-                              "type": "number"
-                            }
+                        "type": "object"
+                      },
+                      {
+                        "properties": {
+                          "custom_input_key_2": {
+                            "description": "A floating point number between -10<sup>13</sup> and 10<sup>13</sup>",
+                            "maximum": 100000000000000,
+                            "minimum": -100000000000000,
+                            "type": "number"
                           }
                         },
-                        {
-                          "properties": {
-                            "[your custom key]": {
-                              "description": "A phone number, limited to 255 characters. Numbers, spaces and punctuation accepted, although spaces and punctuation will be stripped. The following ASCII characters constitute the accepted punctuation: ` ~ ! @ # $ % ^ & * ( ) – _ = + ‘ ” ; : , < . > / ? \\ | [ ] { and }.",
-                              "format": "phone",
-                              "maxLength": 255,
-                              "type": "string"
-                            }
+                        "type": "object"
+                      },
+                      {
+                        "properties": {
+                          "custom_input_key_3": {
+                            "description": "A phone number, limited to 255 characters. Numbers, spaces and punctuation accepted, although spaces and punctuation will be stripped. The following ASCII characters constitute the accepted punctuation: ` ~ ! @ # $ % ^ & * ( ) – _ = + ‘ ” ; : , < . > / ? \\ | [ ] { and }.",
+                            "format": "phone",
+                            "maxLength": 255,
+                            "type": "string"
                           }
                         },
-                        {
-                          "properties": {
-                            "[your custom key]": {
-                              "description": "A string, limited to 255 characters. The null character is not allowed.",
-                              "maxLength": 255,
-                              "type": "string"
-                            }
+                        "type": "object"
+                      },
+                      {
+                        "properties": {
+                          "custom_input_key_4": {
+                            "description": "A string, limited to 255 characters. The null character is not allowed.",
+                            "maxLength": 255,
+                            "type": "string"
                           }
-                        }
-                      ],
-                      "type": "object"
-                    }
+                        },
+                        "type": "object"
+                      }
+                    ],
+                    "type": "object"
                   },
                   "device": {
                     "description": "This object contains information about the device used in the transaction.",
@@ -1945,47 +1951,49 @@
                   },
                   "custom_inputs": {
                     "description": "Custom Inputs are optional inputs to the minFraud service that must first be defined for your account. Select “Custom Inputs” from the Account Portal in order to do so. See our Custom Inputs documentation for more information.",
-                    "items": {
-                      "oneOf": [
-                        {
-                          "properties": {
-                            "[your custom key]": {
-                              "type": "boolean"
-                            }
+                    "anyOf": [
+                      {
+                        "properties": {
+                          "custom_input_key_1": {
+                            "type": "boolean"
                           }
                         },
-                        {
-                          "properties": {
-                            "[your custom key]": {
-                              "description": "A floating point number between -10<sup>13</sup> and 10<sup>13</sup>",
-                              "maximum": 100000000000000,
-                              "minimum": -100000000000000,
-                              "type": "number"
-                            }
+                        "type": "object"
+                      },
+                      {
+                        "properties": {
+                          "custom_input_key_2": {
+                            "description": "A floating point number between -10<sup>13</sup> and 10<sup>13</sup>",
+                            "maximum": 100000000000000,
+                            "minimum": -100000000000000,
+                            "type": "number"
                           }
                         },
-                        {
-                          "properties": {
-                            "[your custom key]": {
-                              "description": "A phone number, limited to 255 characters. Numbers, spaces and punctuation accepted, although spaces and punctuation will be stripped. The following ASCII characters constitute the accepted punctuation: ` ~ ! @ # $ % ^ & * ( ) – _ = + ‘ ” ; : , < . > / ? \\ | [ ] { and }.",
-                              "format": "phone",
-                              "maxLength": 255,
-                              "type": "string"
-                            }
+                        "type": "object"
+                      },
+                      {
+                        "properties": {
+                          "custom_input_key_3": {
+                            "description": "A phone number, limited to 255 characters. Numbers, spaces and punctuation accepted, although spaces and punctuation will be stripped. The following ASCII characters constitute the accepted punctuation: ` ~ ! @ # $ % ^ & * ( ) – _ = + ‘ ” ; : , < . > / ? \\ | [ ] { and }.",
+                            "format": "phone",
+                            "maxLength": 255,
+                            "type": "string"
                           }
                         },
-                        {
-                          "properties": {
-                            "[your custom key]": {
-                              "description": "A string, limited to 255 characters. The null character is not allowed.",
-                              "maxLength": 255,
-                              "type": "string"
-                            }
+                        "type": "object"
+                      },
+                      {
+                        "properties": {
+                          "custom_input_key_4": {
+                            "description": "A string, limited to 255 characters. The null character is not allowed.",
+                            "maxLength": 255,
+                            "type": "string"
                           }
-                        }
-                      ],
-                      "type": "object"
-                    }
+                        },
+                        "type": "object"
+                      }
+                    ],
+                    "type": "object"
                   },
                   "device": {
                     "description": "This object contains information about the device used in the transaction.",
@@ -2489,47 +2497,49 @@
                   },
                   "custom_inputs": {
                     "description": "Custom Inputs are optional inputs to the minFraud service that must first be defined for your account. Select “Custom Inputs” from the Account Portal in order to do so. See our Custom Inputs documentation for more information.",
-                    "items": {
-                      "oneOf": [
-                        {
-                          "properties": {
-                            "[your custom key]": {
-                              "type": "boolean"
-                            }
+                    "anyOf": [
+                      {
+                        "properties": {
+                          "custom_input_key_1": {
+                            "type": "boolean"
                           }
                         },
-                        {
-                          "properties": {
-                            "[your custom key]": {
-                              "description": "A floating point number between -10<sup>13</sup> and 10<sup>13</sup>",
-                              "maximum": 100000000000000,
-                              "minimum": -100000000000000,
-                              "type": "number"
-                            }
+                        "type": "object"
+                      },
+                      {
+                        "properties": {
+                          "custom_input_key_2": {
+                            "description": "A floating point number between -10<sup>13</sup> and 10<sup>13</sup>",
+                            "maximum": 100000000000000,
+                            "minimum": -100000000000000,
+                            "type": "number"
                           }
                         },
-                        {
-                          "properties": {
-                            "[your custom key]": {
-                              "description": "A phone number, limited to 255 characters. Numbers, spaces and punctuation accepted, although spaces and punctuation will be stripped. The following ASCII characters constitute the accepted punctuation: ` ~ ! @ # $ % ^ & * ( ) – _ = + ‘ ” ; : , < . > / ? \\ | [ ] { and }.",
-                              "format": "phone",
-                              "maxLength": 255,
-                              "type": "string"
-                            }
+                        "type": "object"
+                      },
+                      {
+                        "properties": {
+                          "custom_input_key_3": {
+                            "description": "A phone number, limited to 255 characters. Numbers, spaces and punctuation accepted, although spaces and punctuation will be stripped. The following ASCII characters constitute the accepted punctuation: ` ~ ! @ # $ % ^ & * ( ) – _ = + ‘ ” ; : , < . > / ? \\ | [ ] { and }.",
+                            "format": "phone",
+                            "maxLength": 255,
+                            "type": "string"
                           }
                         },
-                        {
-                          "properties": {
-                            "[your custom key]": {
-                              "description": "A string, limited to 255 characters. The null character is not allowed.",
-                              "maxLength": 255,
-                              "type": "string"
-                            }
+                        "type": "object"
+                      },
+                      {
+                        "properties": {
+                          "custom_input_key_4": {
+                            "description": "A string, limited to 255 characters. The null character is not allowed.",
+                            "maxLength": 255,
+                            "type": "string"
                           }
-                        }
-                      ],
-                      "type": "object"
-                    }
+                        },
+                        "type": "object"
+                      }
+                    ],
+                    "type": "object"
                   },
                   "device": {
                     "description": "This object contains information about the device used in the transaction.",
@@ -3033,47 +3043,49 @@
                   },
                   "custom_inputs": {
                     "description": "Custom Inputs are optional inputs to the minFraud service that must first be defined for your account. Select “Custom Inputs” from the Account Portal in order to do so. See our Custom Inputs documentation for more information.",
-                    "items": {
-                      "oneOf": [
-                        {
-                          "properties": {
-                            "[your custom key]": {
-                              "type": "boolean"
-                            }
+                    "anyOf": [
+                      {
+                        "properties": {
+                          "custom_input_key_1": {
+                            "type": "boolean"
                           }
                         },
-                        {
-                          "properties": {
-                            "[your custom key]": {
-                              "description": "A floating point number between -10<sup>13</sup> and 10<sup>13</sup>",
-                              "maximum": 100000000000000,
-                              "minimum": -100000000000000,
-                              "type": "number"
-                            }
+                        "type": "object"
+                      },
+                      {
+                        "properties": {
+                          "custom_input_key_2": {
+                            "description": "A floating point number between -10<sup>13</sup> and 10<sup>13</sup>",
+                            "maximum": 100000000000000,
+                            "minimum": -100000000000000,
+                            "type": "number"
                           }
                         },
-                        {
-                          "properties": {
-                            "[your custom key]": {
-                              "description": "A phone number, limited to 255 characters. Numbers, spaces and punctuation accepted, although spaces and punctuation will be stripped. The following ASCII characters constitute the accepted punctuation: ` ~ ! @ # $ % ^ & * ( ) – _ = + ‘ ” ; : , < . > / ? \\ | [ ] { and }.",
-                              "format": "phone",
-                              "maxLength": 255,
-                              "type": "string"
-                            }
+                        "type": "object"
+                      },
+                      {
+                        "properties": {
+                          "custom_input_key_3": {
+                            "description": "A phone number, limited to 255 characters. Numbers, spaces and punctuation accepted, although spaces and punctuation will be stripped. The following ASCII characters constitute the accepted punctuation: ` ~ ! @ # $ % ^ & * ( ) – _ = + ‘ ” ; : , < . > / ? \\ | [ ] { and }.",
+                            "format": "phone",
+                            "maxLength": 255,
+                            "type": "string"
                           }
                         },
-                        {
-                          "properties": {
-                            "[your custom key]": {
-                              "description": "A string, limited to 255 characters. The null character is not allowed.",
-                              "maxLength": 255,
-                              "type": "string"
-                            }
+                        "type": "object"
+                      },
+                      {
+                        "properties": {
+                          "custom_input_key_4": {
+                            "description": "A string, limited to 255 characters. The null character is not allowed.",
+                            "maxLength": 255,
+                            "type": "string"
                           }
-                        }
-                      ],
-                      "type": "object"
-                    }
+                        },
+                        "type": "object"
+                      }
+                    ],
+                    "type": "object"
                   },
                   "device": {
                     "description": "This object contains information about the device used in the transaction.",
@@ -4419,47 +4431,49 @@
                   },
                   "custom_inputs": {
                     "description": "Custom Inputs are optional inputs to the minFraud service that must first be defined for your account. Select “Custom Inputs” from the Account Portal in order to do so. See our Custom Inputs documentation for more information.",
-                    "items": {
-                      "oneOf": [
-                        {
-                          "properties": {
-                            "[your custom key]": {
-                              "type": "boolean"
-                            }
+                    "anyOf": [
+                      {
+                        "properties": {
+                          "custom_input_key_1": {
+                            "type": "boolean"
                           }
                         },
-                        {
-                          "properties": {
-                            "[your custom key]": {
-                              "description": "A floating point number between -10<sup>13</sup> and 10<sup>13</sup>",
-                              "maximum": 100000000000000,
-                              "minimum": -100000000000000,
-                              "type": "number"
-                            }
+                        "type": "object"
+                      },
+                      {
+                        "properties": {
+                          "custom_input_key_2": {
+                            "description": "A floating point number between -10<sup>13</sup> and 10<sup>13</sup>",
+                            "maximum": 100000000000000,
+                            "minimum": -100000000000000,
+                            "type": "number"
                           }
                         },
-                        {
-                          "properties": {
-                            "[your custom key]": {
-                              "description": "A phone number, limited to 255 characters. Numbers, spaces and punctuation accepted, although spaces and punctuation will be stripped. The following ASCII characters constitute the accepted punctuation: ` ~ ! @ # $ % ^ & * ( ) – _ = + ‘ ” ; : , < . > / ? \\ | [ ] { and }.",
-                              "format": "phone",
-                              "maxLength": 255,
-                              "type": "string"
-                            }
+                        "type": "object"
+                      },
+                      {
+                        "properties": {
+                          "custom_input_key_3": {
+                            "description": "A phone number, limited to 255 characters. Numbers, spaces and punctuation accepted, although spaces and punctuation will be stripped. The following ASCII characters constitute the accepted punctuation: ` ~ ! @ # $ % ^ & * ( ) – _ = + ‘ ” ; : , < . > / ? \\ | [ ] { and }.",
+                            "format": "phone",
+                            "maxLength": 255,
+                            "type": "string"
                           }
                         },
-                        {
-                          "properties": {
-                            "[your custom key]": {
-                              "description": "A string, limited to 255 characters. The null character is not allowed.",
-                              "maxLength": 255,
-                              "type": "string"
-                            }
+                        "type": "object"
+                      },
+                      {
+                        "properties": {
+                          "custom_input_key_4": {
+                            "description": "A string, limited to 255 characters. The null character is not allowed.",
+                            "maxLength": 255,
+                            "type": "string"
                           }
-                        }
-                      ],
-                      "type": "object"
-                    }
+                        },
+                        "type": "object"
+                      }
+                    ],
+                    "type": "object"
                   },
                   "device": {
                     "description": "This object contains information about the device used in the transaction.",
@@ -4963,47 +4977,49 @@
                   },
                   "custom_inputs": {
                     "description": "Custom Inputs are optional inputs to the minFraud service that must first be defined for your account. Select “Custom Inputs” from the Account Portal in order to do so. See our Custom Inputs documentation for more information.",
-                    "items": {
-                      "oneOf": [
-                        {
-                          "properties": {
-                            "[your custom key]": {
-                              "type": "boolean"
-                            }
+                    "anyOf": [
+                      {
+                        "properties": {
+                          "custom_input_key_1": {
+                            "type": "boolean"
                           }
                         },
-                        {
-                          "properties": {
-                            "[your custom key]": {
-                              "description": "A floating point number between -10<sup>13</sup> and 10<sup>13</sup>",
-                              "maximum": 100000000000000,
-                              "minimum": -100000000000000,
-                              "type": "number"
-                            }
+                        "type": "object"
+                      },
+                      {
+                        "properties": {
+                          "custom_input_key_2": {
+                            "description": "A floating point number between -10<sup>13</sup> and 10<sup>13</sup>",
+                            "maximum": 100000000000000,
+                            "minimum": -100000000000000,
+                            "type": "number"
                           }
                         },
-                        {
-                          "properties": {
-                            "[your custom key]": {
-                              "description": "A phone number, limited to 255 characters. Numbers, spaces and punctuation accepted, although spaces and punctuation will be stripped. The following ASCII characters constitute the accepted punctuation: ` ~ ! @ # $ % ^ & * ( ) – _ = + ‘ ” ; : , < . > / ? \\ | [ ] { and }.",
-                              "format": "phone",
-                              "maxLength": 255,
-                              "type": "string"
-                            }
+                        "type": "object"
+                      },
+                      {
+                        "properties": {
+                          "custom_input_key_3": {
+                            "description": "A phone number, limited to 255 characters. Numbers, spaces and punctuation accepted, although spaces and punctuation will be stripped. The following ASCII characters constitute the accepted punctuation: ` ~ ! @ # $ % ^ & * ( ) – _ = + ‘ ” ; : , < . > / ? \\ | [ ] { and }.",
+                            "format": "phone",
+                            "maxLength": 255,
+                            "type": "string"
                           }
                         },
-                        {
-                          "properties": {
-                            "[your custom key]": {
-                              "description": "A string, limited to 255 characters. The null character is not allowed.",
-                              "maxLength": 255,
-                              "type": "string"
-                            }
+                        "type": "object"
+                      },
+                      {
+                        "properties": {
+                          "custom_input_key_4": {
+                            "description": "A string, limited to 255 characters. The null character is not allowed.",
+                            "maxLength": 255,
+                            "type": "string"
                           }
-                        }
-                      ],
-                      "type": "object"
-                    }
+                        },
+                        "type": "object"
+                      }
+                    ],
+                    "type": "object"
                   },
                   "device": {
                     "description": "This object contains information about the device used in the transaction.",
@@ -5507,47 +5523,49 @@
                   },
                   "custom_inputs": {
                     "description": "Custom Inputs are optional inputs to the minFraud service that must first be defined for your account. Select “Custom Inputs” from the Account Portal in order to do so. See our Custom Inputs documentation for more information.",
-                    "items": {
-                      "oneOf": [
-                        {
-                          "properties": {
-                            "[your custom key]": {
-                              "type": "boolean"
-                            }
+                    "anyOf": [
+                      {
+                        "properties": {
+                          "custom_input_key_1": {
+                            "type": "boolean"
                           }
                         },
-                        {
-                          "properties": {
-                            "[your custom key]": {
-                              "description": "A floating point number between -10<sup>13</sup> and 10<sup>13</sup>",
-                              "maximum": 100000000000000,
-                              "minimum": -100000000000000,
-                              "type": "number"
-                            }
+                        "type": "object"
+                      },
+                      {
+                        "properties": {
+                          "custom_input_key_2": {
+                            "description": "A floating point number between -10<sup>13</sup> and 10<sup>13</sup>",
+                            "maximum": 100000000000000,
+                            "minimum": -100000000000000,
+                            "type": "number"
                           }
                         },
-                        {
-                          "properties": {
-                            "[your custom key]": {
-                              "description": "A phone number, limited to 255 characters. Numbers, spaces and punctuation accepted, although spaces and punctuation will be stripped. The following ASCII characters constitute the accepted punctuation: ` ~ ! @ # $ % ^ & * ( ) – _ = + ‘ ” ; : , < . > / ? \\ | [ ] { and }.",
-                              "format": "phone",
-                              "maxLength": 255,
-                              "type": "string"
-                            }
+                        "type": "object"
+                      },
+                      {
+                        "properties": {
+                          "custom_input_key_3": {
+                            "description": "A phone number, limited to 255 characters. Numbers, spaces and punctuation accepted, although spaces and punctuation will be stripped. The following ASCII characters constitute the accepted punctuation: ` ~ ! @ # $ % ^ & * ( ) – _ = + ‘ ” ; : , < . > / ? \\ | [ ] { and }.",
+                            "format": "phone",
+                            "maxLength": 255,
+                            "type": "string"
                           }
                         },
-                        {
-                          "properties": {
-                            "[your custom key]": {
-                              "description": "A string, limited to 255 characters. The null character is not allowed.",
-                              "maxLength": 255,
-                              "type": "string"
-                            }
+                        "type": "object"
+                      },
+                      {
+                        "properties": {
+                          "custom_input_key_4": {
+                            "description": "A string, limited to 255 characters. The null character is not allowed.",
+                            "maxLength": 255,
+                            "type": "string"
                           }
-                        }
-                      ],
-                      "type": "object"
-                    }
+                        },
+                        "type": "object"
+                      }
+                    ],
+                    "type": "object"
                   },
                   "device": {
                     "description": "This object contains information about the device used in the transaction.",
@@ -7084,47 +7102,49 @@
           },
           "custom_inputs": {
             "description": "Custom Inputs are optional inputs to the minFraud service that must first be defined for your account. Select “Custom Inputs” from the Account Portal in order to do so. See our Custom Inputs documentation for more information.",
-            "items": {
-              "oneOf": [
-                {
-                  "properties": {
-                    "[your custom key]": {
-                      "type": "boolean"
-                    }
+            "anyOf": [
+              {
+                "properties": {
+                  "custom_input_key_1": {
+                    "type": "boolean"
                   }
                 },
-                {
-                  "properties": {
-                    "[your custom key]": {
-                      "description": "A floating point number between -10<sup>13</sup> and 10<sup>13</sup>",
-                      "maximum": 100000000000000,
-                      "minimum": -100000000000000,
-                      "type": "number"
-                    }
+                "type": "object"
+              },
+              {
+                "properties": {
+                  "custom_input_key_2": {
+                    "description": "A floating point number between -10<sup>13</sup> and 10<sup>13</sup>",
+                    "maximum": 100000000000000,
+                    "minimum": -100000000000000,
+                    "type": "number"
                   }
                 },
-                {
-                  "properties": {
-                    "[your custom key]": {
-                      "description": "A phone number, limited to 255 characters. Numbers, spaces and punctuation accepted, although spaces and punctuation will be stripped. The following ASCII characters constitute the accepted punctuation: ` ~ ! @ # $ % ^ & * ( ) – _ = + ‘ ” ; : , < . > / ? \\ | [ ] { and }.",
-                      "format": "phone",
-                      "maxLength": 255,
-                      "type": "string"
-                    }
+                "type": "object"
+              },
+              {
+                "properties": {
+                  "custom_input_key_3": {
+                    "description": "A phone number, limited to 255 characters. Numbers, spaces and punctuation accepted, although spaces and punctuation will be stripped. The following ASCII characters constitute the accepted punctuation: ` ~ ! @ # $ % ^ & * ( ) – _ = + ‘ ” ; : , < . > / ? \\ | [ ] { and }.",
+                    "format": "phone",
+                    "maxLength": 255,
+                    "type": "string"
                   }
                 },
-                {
-                  "properties": {
-                    "[your custom key]": {
-                      "description": "A string, limited to 255 characters. The null character is not allowed.",
-                      "maxLength": 255,
-                      "type": "string"
-                    }
+                "type": "object"
+              },
+              {
+                "properties": {
+                  "custom_input_key_4": {
+                    "description": "A string, limited to 255 characters. The null character is not allowed.",
+                    "maxLength": 255,
+                    "type": "string"
                   }
-                }
-              ],
-              "type": "object"
-            }
+                },
+                "type": "object"
+              }
+            ],
+            "type": "object"
           },
           "device": {
             "description": "This object contains information about the device used in the transaction.",
@@ -7693,90 +7713,51 @@
         },
         "type": "object"
       },
-      "Request.CustomInput": {
-        "oneOf": [
+      "Request.CustomInputs": {
+        "description": "Custom Inputs are optional inputs to the minFraud service that must first be defined for your account. Select “Custom Inputs” from the Account Portal in order to do so. See our Custom Inputs documentation for more information.",
+        "anyOf": [
           {
             "properties": {
-              "[your custom key]": {
+              "custom_input_key_1": {
                 "type": "boolean"
               }
-            }
+            },
+            "type": "object"
           },
           {
             "properties": {
-              "[your custom key]": {
+              "custom_input_key_2": {
                 "description": "A floating point number between -10<sup>13</sup> and 10<sup>13</sup>",
                 "maximum": 100000000000000,
                 "minimum": -100000000000000,
                 "type": "number"
               }
-            }
+            },
+            "type": "object"
           },
           {
             "properties": {
-              "[your custom key]": {
+              "custom_input_key_3": {
                 "description": "A phone number, limited to 255 characters. Numbers, spaces and punctuation accepted, although spaces and punctuation will be stripped. The following ASCII characters constitute the accepted punctuation: ` ~ ! @ # $ % ^ & * ( ) – _ = + ‘ ” ; : , < . > / ? \\ | [ ] { and }.",
                 "format": "phone",
                 "maxLength": 255,
                 "type": "string"
               }
-            }
+            },
+            "type": "object"
           },
           {
             "properties": {
-              "[your custom key]": {
+              "custom_input_key_4": {
                 "description": "A string, limited to 255 characters. The null character is not allowed.",
                 "maxLength": 255,
                 "type": "string"
               }
-            }
+            },
+            "type": "object"
           }
         ],
         "type": "object"
-      },
-      "Request.CustomInputs": {
-        "description": "Custom Inputs are optional inputs to the minFraud service that must first be defined for your account. Select “Custom Inputs” from the Account Portal in order to do so. See our Custom Inputs documentation for more information.",
-        "items": {
-          "oneOf": [
-            {
-              "properties": {
-                "[your custom key]": {
-                  "type": "boolean"
-                }
-              }
-            },
-            {
-              "properties": {
-                "[your custom key]": {
-                  "description": "A floating point number between -10<sup>13</sup> and 10<sup>13</sup>",
-                  "maximum": 100000000000000,
-                  "minimum": -100000000000000,
-                  "type": "number"
-                }
-              }
-            },
-            {
-              "properties": {
-                "[your custom key]": {
-                  "description": "A phone number, limited to 255 characters. Numbers, spaces and punctuation accepted, although spaces and punctuation will be stripped. The following ASCII characters constitute the accepted punctuation: ` ~ ! @ # $ % ^ & * ( ) – _ = + ‘ ” ; : , < . > / ? \\ | [ ] { and }.",
-                  "format": "phone",
-                  "maxLength": 255,
-                  "type": "string"
-                }
-              }
-            },
-            {
-              "properties": {
-                "[your custom key]": {
-                  "description": "A string, limited to 255 characters. The null character is not allowed.",
-                  "maxLength": 255,
-                  "type": "string"
-                }
-              }
-            }
-          ],
-          "type": "object"
-        }
       },
       "Request.Device": {
         "description": "This object contains information about the device used in the transaction.",
