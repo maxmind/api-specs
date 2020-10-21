@@ -4,7 +4,7 @@
     "@apidevtools/swagger-parser": "^10.0.1",
     "@maxmind/minfraud-api-node": "^1.8.0",
     "@types/fs-extra": "^9.0.1",
-    "@types/jest": "^26.0.13",
+    "@types/jest": "^26.0.15",
     "@types/lodash": "^4.14.161",
     "@types/node": "^14.6.4",
     "@types/node-fetch": "^2.5.7",
