@@ -2889,6 +2889,11 @@ openapi-types@1.3.5, openapi-types@^1.3.5:
   resolved "https://registry.yarnpkg.com/openapi-types/-/openapi-types-1.3.5.tgz#6718cfbc857fe6c6f1471f65b32bdebb9c10ce40"
   integrity sha512-11oi4zYorsgvg5yBarZplAqbpev5HkuVNPlZaPTknPDzAynq+lnJdXAmruGWP0s+dNYZS7bjM+xrTpJw7184Fg==
 
+openapi-types@^8.0.0:
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/openapi-types/-/openapi-types-8.0.0.tgz#7e1979538798d31a3c3bfed667e5e9295402f9bc"
+  integrity sha512-dcHYyCDOAy4QQTrur5Sn1L3lPVspB7rd04Rw/Q7AsMvfV797IiWgmKziFCbq8VhnBoREU/SPPSBDxtK9Biwa1g==
+
 openapi-validator@^0.9.0:
   version "0.9.0"
   resolved "https://registry.yarnpkg.com/openapi-validator/-/openapi-validator-0.9.0.tgz#3bbc73cb8f7f82a1882b510d759d331787950e6d"
